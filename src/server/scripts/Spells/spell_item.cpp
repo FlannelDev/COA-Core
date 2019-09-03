@@ -582,12 +582,75 @@ class spell_item_deathbringers_will : public SpellScriptLoader
                 });
             }
 
-            void HandleProc(AuraEffect const* aurEff, ProcEventInfo& eventInfo)
+            void HandleProc(AuraEffect const* aurEff, ProcEventInfo& eventInfo) //-Class
             {
                 static std::vector<uint32> const triggeredSpells[MAX_CLASSES] =
                 {
                     //CLASS_NONE
                     { },
+					//CLASS_DRAGONKNIGHT
+					{ Strength, Critical, Haste },
+					//CLASS_WITCHDOCTOR
+					{ },
+					//CLASS_DEMONHUNTER 
+					 { Agility, Critical, AttackPower },
+					 //CLASS_WITCHHUNTER
+					 { Agility, Critical, AttackPower },
+					 //CLASS_STORMBRINGER
+					 { },
+					 //CLASS_SPIRITMAGE
+					 { },
+					 //CLASS_ABOMINATION
+					 { Strength, Critical, Haste },
+					 //CLASS_GUARDIAN
+					 { Strength, Critical, Haste },
+					 //CLASS_SAMURAI
+					 { },
+					//CLASS_WORGEN
+					{ Agility, Critical, AttackPower },
+					//CLASS_THIEF
+					{ },
+					//CLASS_RANGER
+					{ Agility, Critical, AttackPower },
+					//CLASS_BARD
+					{ },
+					//CLASS_PROPHET
+					{ },
+					//CLASS_DJINN
+					{ },
+					//CLASS_PYROMANCER
+					{ },
+					//CLASS_CULTIST
+					{ },
+					//CLASS_NECROMANCER
+					{ },
+					//CLASS_SUNDANCER
+					{ Strength, Critical, Haste },
+					//CLASS_TINKER
+					{ Agility, Critical, AttackPower },
+					//CLASS_RIFTBLADE
+					{ },
+					//CLASS_REAPER
+					{ Agility, Critical, AttackPower },
+					//CLASS_GROVEWARDEN
+					{ },
+					//CLASS_TEMPLAR
+					{ },
+					//CLASS_TIDECALLER
+					{ },
+					//CLASS_DOOMCALLER
+					{ },
+					//CLASS_HELLION
+					{ },
+					//CLASS_STARLORD
+					{ Agility, Critical, AttackPower },
+					//CLASS_LION
+					{ },
+					//CLASS_VALKYRIE
+					{ },
+					//CLASS_SPARTAN
+					{ Strength, Critical, Haste },
+					//-Class End of Custom Class
                     //CLASS_WARRIOR
                     { Strength, Critical, Haste },
                     //CLASS_PALADIN

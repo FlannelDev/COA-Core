@@ -352,7 +352,7 @@ void Player::UpdateAttackPowerAndDamage(bool ranged)
         index_mod = UNIT_FIELD_RANGED_ATTACK_POWER_MODS;
         index_mult = UNIT_FIELD_RANGED_ATTACK_POWER_MULTIPLIER;
 
-        switch (GetClass())
+        switch (GetClass()) //-Class
         {
             case CLASS_HUNTER:
                 val2 = level * 2.0f + GetStat(STAT_AGILITY) - 10.0f;

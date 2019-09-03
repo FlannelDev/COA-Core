@@ -4414,7 +4414,7 @@ void ObjectMgr::BuildPlayerLevelInfo(uint8 race, uint8 _class, uint8 level, Play
     // base data (last known level)
     *info = _playerInfo[race][_class]->levelInfo[sWorld->getIntConfig(CONFIG_MAX_PLAYER_LEVEL) - 1];
 
-    // if conversion from uint32 to uint8 causes unexpected behaviour, change lvl to uint32
+    // if conversion from uint32 to uint8 causes unexpected behaviour, change lvl to uint32  //-Class
     for (uint8 lvl = sWorld->getIntConfig(CONFIG_MAX_PLAYER_LEVEL) - 1; lvl < level; ++lvl)
     {
         switch (_class)

@@ -126,28 +126,71 @@ enum Races
 enum Classes
 {
     CLASS_NONE          = 0, // SKIP
-    CLASS_WARRIOR       = 1, // TITLE Warrior
-    CLASS_PALADIN       = 2, // TITLE Paladin
-    CLASS_HUNTER        = 3, // TITLE Hunter
-    CLASS_ROGUE         = 4, // TITLE Rogue
-    CLASS_PRIEST        = 5, // TITLE Priest
-    CLASS_DEATH_KNIGHT  = 6, // TITLE Death Knight
-    CLASS_SHAMAN        = 7, // TITLE Shaman
-    CLASS_MAGE          = 8, // TITLE Mage
-    CLASS_WARLOCK       = 9, // TITLE Warlock
-    //CLASS_UNK           = 10,
-    CLASS_DRUID         = 11 // TITLE Druid
+    CLASS_WARRIOR       = 32, // TITLE Warrior
+    CLASS_PALADIN       = 33, // TITLE Paladin
+    CLASS_HUNTER        = 34, // TITLE Hunter
+    CLASS_ROGUE         = 35, // TITLE Rogue
+    CLASS_PRIEST        = 36, // TITLE Priest
+    CLASS_DEATH_KNIGHT  = 37, // TITLE Death Knight
+    CLASS_SHAMAN        = 38, // TITLE Shaman
+    CLASS_MAGE          = 39, // TITLE Mage
+    CLASS_WARLOCK       = 40, // TITLE Warlock
+    CLASS_UNK           = 41,
+    CLASS_DRUID         = 42 // TITLE Druid
+ 
+CLASS_DRAGONKNIGHT = 1; //-Class
+CLASS_WITCHDOCTOR = 2;
+CLASS_DEMONHUNTER = 3;
+CLASS_WITCHHUNTER = 4;
+CLASS_STORMBRINGER = 5;
+CLASS_SPIRITMAGE = 6;
+CLASS_ABOMINATION = 7;
+CLASS_GUARDIAN = 8;
+CLASS_SAMURAI = 9;
+CLASS_WORGEN = 10;
+CLASS_THIEF = 11;
+CLASS_RANGER = 12;
+CLASS_BARD = 13;
+CLASS_PROPHET = 14;
+CLASS_DJINN = 15;
+CLASS_PYROMANCER = 16;
+CLASS_CULTIST = 17;
+CLASS_NECROMANCER = 18;
+CLASS_SUNDANCER = 19;
+CLASS_TINKER = 20;
+CLASS_RIFTBLADE = 21;
+CLASS_REAPER = 22;
+CLASS_GROVEWARDEN = 23;
+CLASS_TEMPLAR = 24;
+CLASS_TIDECALLER = 25;
+CLASS_DOOMCALLER = 26;
+CLASS_HELLION = 27;
+CLASS_STARLORD = 28;
+CLASS_LION = 29;
+CLASS_VALKYRIE = 30;
+CLASS_SPARTAN = 31;
+
 };
 
 // max+1 for player class
-#define MAX_CLASSES       12
+#define MAX_CLASSES       43 //-Class custom+base+1
 
 #define CLASSMASK_ALL_PLAYABLE \
-    ((1<<(CLASS_WARRIOR-1))|(1<<(CLASS_PALADIN-1))|(1<<(CLASS_HUNTER-1))| \
+    (1<<(CLASS_DRAGONKNIGHT-1)) |(1<<(CLASS_WITCHDOCTOR-1))| (1<<(CLASS_DEMONHUNTER-1))| \
+    (1<<(CLASS_WITCHHUNTER-1))|(1<<(CLASS_STORMBRINGER-1))| (1<<(CLASS_SPIRITMAGE-1))| \
+    (1<<(CLASS_ABOMINATION-1))|(1<<(CLASS_GUARDIAN-1))| (1<<(CLASS_SAMURAI-1))| \
+	(1<<(CLASS_WORGEN-1))|(1<<(CLASS_THIEF-1))| (1<<(CLASS_RANGER-1))| \
+	(1<<(CLASS_BARD-1))|(1<<(CLASS_PROPHET-1))| (1<<(CLASS_DJINN-1))| \
+	(1<<(CLASS_PYROMANCER-1))|(1<<(CLASS_CULTIST-1))| (1<<(CLASS_NECROMANCER-1))| \
+	(1<<(CLASS_SUNDANCER-1))|(1<<(CLASS_TINKER-1))| (1<<(CLASS_RIFTBLADE-1))| \
+	(1<<(CLASS_REAPER-1))|(1<<(CLASS_GROVEWARDEN-1))| (1<<(CLASS_TEMPLAR-1))| \
+	(1<<(CLASS_TIDECALLER-1))|(1<<(CLASS_DOOMCALLER-1))| (1<<(CLASS_HELLION-1))| \
+	(1<<(CLASS_STARLORD-1))|(1<<(CLASS_LION-1))| (1<<(CLASS_VALKYRIE-1))| \
+    (1<<(CLASS_SPARTAN-1))) | \
+	((1<<(CLASS_WARRIOR-1))|(1<<(CLASS_PALADIN-1))|(1<<(CLASS_HUNTER-1))| \
     (1<<(CLASS_ROGUE-1))  |(1<<(CLASS_PRIEST-1)) |(1<<(CLASS_SHAMAN-1))| \
-    (1<<(CLASS_MAGE-1))   |(1<<(CLASS_WARLOCK-1))|(1<<(CLASS_DRUID-1)) | \
-    (1<<(CLASS_DEATH_KNIGHT-1)))
-
+    (1<<(CLASS_MAGE-1))   |(1<<(CLASS_WARLOCK-1))|(1<<(CLASS_DRUID-1)) |
+//-Class end of custom Class at Spartan
 #define MAX_TALENT_TREES 3
 
 enum PlayerSpecializations
@@ -2857,7 +2900,7 @@ enum QuestSort
 
 constexpr uint8 ClassByQuestSort(int32 QuestSort)
 {
-    switch (QuestSort)
+    switch (QuestSort) //-Class used for class quests.
     {
         case QUEST_SORT_WARLOCK:        return CLASS_WARLOCK;
         case QUEST_SORT_WARRIOR:        return CLASS_WARRIOR;
