@@ -582,7 +582,7 @@ class spell_item_deathbringers_will : public SpellScriptLoader
                 });
             }
 
-            void HandleProc(AuraEffect const* aurEff, ProcEventInfo& eventInfo) //-Class
+            void HandleProc(AuraEffect const* aurEff, ProcEventInfo& eventInfo) //-Class 
             {
                 static std::vector<uint32> const triggeredSpells[MAX_CLASSES] =
                 {

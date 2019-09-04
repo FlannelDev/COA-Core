@@ -138,7 +138,7 @@ enum Classes
     CLASS_UNK           = 41,
     CLASS_DRUID         = 42 // TITLE Druid
  
-CLASS_DRAGONKNIGHT = 1; //-Class
+CLASS_DRAGONKNIGHT = 1; //-Class 
 CLASS_WITCHDOCTOR = 2;
 CLASS_DEMONHUNTER = 3;
 CLASS_WITCHHUNTER = 4;
