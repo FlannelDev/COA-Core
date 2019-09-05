@@ -451,6 +451,101 @@ void Player::UpdateAttackPowerAndDamage(bool ranged)
             case CLASS_WARLOCK:
                 val2 = GetStat(STAT_STRENGTH) - 10.0f;
                 break;
+				
+			case CLASS_DRAGONKNIGHT:
+			 val2 = level * 3.0f + GetStat(STAT_STRENGTH) * 2.0f - 20.0f;
+                break;
+			case CLASS_WITCHDOCTOR:
+			val2 = GetStat(STAT_STRENGTH) - 10.0f;
+                break;
+			case CLASS_DEMONHUNTER:
+			val2 = level * 2.0f + GetStat(STAT_STRENGTH) + GetStat(STAT_AGILITY) - 20.0f;
+                break;
+			case CLASS_WITCHHUNTER:
+			val2 = level * 2.0f + GetStat(STAT_STRENGTH) + GetStat(STAT_AGILITY) - 20.0f;
+                break;
+			case CLASS_STORMBRINGER:
+			val2 = GetStat(STAT_STRENGTH) - 10.0f;
+                break;
+			case CLASS_SPIRITMAGE:
+			val2 = GetStat(STAT_STRENGTH) - 10.0f;
+                break;
+			case CLASS_ABOMINATION:
+			 val2 = level * 3.0f + GetStat(STAT_STRENGTH) * 2.0f - 20.0f;
+                break;
+			case CLASS_GUARDIAN:
+			 val2 = level * 3.0f + GetStat(STAT_STRENGTH) * 2.0f - 20.0f;
+                break;
+			case CLASS_SAMURAI:
+			val2 = level * 2.0f + GetStat(STAT_STRENGTH) + GetStat(STAT_AGILITY) - 20.0f;
+                break;
+			case CLASS_WORGEN:
+			val2 = level * 2.0f + GetStat(STAT_STRENGTH) + GetStat(STAT_AGILITY) - 20.0f;
+                break;
+			case CLASS_THIEF:
+			val2 = level * 2.0f + GetStat(STAT_STRENGTH) + GetStat(STAT_AGILITY) - 20.0f;
+                break;
+			case CLASS_RANGER:
+			val2 = level * 2.0f + GetStat(STAT_STRENGTH) + GetStat(STAT_AGILITY) - 20.0f;
+                break;
+			case CLASS_BARD:
+			 val2 = level * 3.0f + GetStat(STAT_STRENGTH) * 2.0f - 20.0f;
+                break;
+			case CLASS_PROPHET:
+			val2 = GetStat(STAT_STRENGTH) - 10.0f;
+                break;
+			case CLASS_DJINN:
+			val2 = GetStat(STAT_STRENGTH) - 10.0f;
+                break;
+			case CLASS_PYROMANCER:
+			val2 = GetStat(STAT_STRENGTH) - 10.0f;
+                break;
+			case CLASS_CULTIST:
+			val2 = GetStat(STAT_STRENGTH) - 10.0f;
+                break;
+			case CLASS_NECROMANCER:
+			val2 = GetStat(STAT_STRENGTH) - 10.0f;
+                break;
+			case CLASS_SUNDANCER:
+			 val2 = level * 3.0f + GetStat(STAT_STRENGTH) * 2.0f - 20.0f;
+                break;
+			case CLASS_TINKER:
+			val2 = level * 2.0f + GetStat(STAT_STRENGTH) + GetStat(STAT_AGILITY) - 20.0f;
+                break;
+			case CLASS_RIFTBLADE:
+			val2 = level * 2.0f + GetStat(STAT_STRENGTH) + GetStat(STAT_AGILITY) - 20.0f;
+                break;
+			case CLASS_REAPER:
+			val2 = level * 2.0f + GetStat(STAT_STRENGTH) + GetStat(STAT_AGILITY) - 20.0f;
+                break;
+			case CLASS_GROVEWARDEN:
+			 val2 = level * 3.0f + GetStat(STAT_STRENGTH) * 2.0f - 20.0f;
+                break;
+			case CLASS_TEMPLAR:
+			 val2 = level * 3.0f + GetStat(STAT_STRENGTH) * 2.0f - 20.0f;
+                break;
+			case CLASS_TIDECALLER:
+			val2 = GetStat(STAT_STRENGTH) - 10.0f;
+                break;
+			case CLASS_DOOMCALLER:
+			val2 = GetStat(STAT_STRENGTH) - 10.0f;
+                break;
+			case CLASS_HELLION:
+			val2 = GetStat(STAT_STRENGTH) - 10.0f;
+                break;
+			case CLASS_STARLORD:
+			 val2 = level * 3.0f + GetStat(STAT_STRENGTH) * 2.0f - 20.0f;
+                break;
+			case CLASS_LION:
+			 val2 = level * 3.0f + GetStat(STAT_STRENGTH) * 2.0f - 20.0f;
+                break;
+			case CLASS_VALKYRIE:
+			val2 = GetStat(STAT_STRENGTH) - 10.0f;
+                break;
+			case CLASS_SPARTAN:
+			 val2 = level * 3.0f + GetStat(STAT_STRENGTH) * 2.0f - 20.0f;
+                break;
+			
         }
     }
 
