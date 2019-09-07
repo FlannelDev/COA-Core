@@ -4481,6 +4481,224 @@ void ObjectMgr::BuildPlayerLevelInfo(uint8 race, uint8 _class, uint8 level, Play
                 info->stats[STAT_AGILITY]   += (lvl > 38 ? 2: (lvl > 8 && (lvl%2) ? 1: 0));
                 info->stats[STAT_INTELLECT] += (lvl > 38 ? 3: (lvl > 4 ? 1: 0));
                 info->stats[STAT_SPIRIT]    += (lvl > 38 ? 3: (lvl > 5 ? 1: 0));
+				
+			case CLASS_DRAGONKNIGHT: //-Class start of custom class stat scales
+                info->stats[STAT_STRENGTH]  += (lvl > 23 ? 2: (lvl > 1  ? 1: 0));
+                info->stats[STAT_STAMINA]   += (lvl > 23 ? 2: (lvl > 1  ? 1: 0));
+                info->stats[STAT_AGILITY]   += (lvl > 36 ? 1: (lvl > 6 && (lvl%2) ? 1: 0));
+                info->stats[STAT_INTELLECT] += (lvl > 9 && !(lvl%2) ? 1: 0);
+                info->stats[STAT_SPIRIT]    += (lvl > 9 && !(lvl%2) ? 1: 0);
+                break;
+			case CLASS_WITCHDOCTOR:
+                info->stats[STAT_STRENGTH]  += (lvl > 9 && !(lvl%2) ? 1: 0);
+                info->stats[STAT_STAMINA]   += (lvl > 38 ? 2: (lvl > 3 ? 1: 0));
+                info->stats[STAT_AGILITY]   += (lvl > 9 && !(lvl%2) ? 1: 0);
+                info->stats[STAT_INTELLECT] += (lvl > 33 ? 2: (lvl > 2 ? 1: 0));
+                info->stats[STAT_SPIRIT]    += (lvl > 38 ? 2: (lvl > 3 ? 1: 0));
+                break;
+			case CLASS_DEMONHUNTER:
+                info->stats[STAT_STRENGTH]  += (lvl > 5  ? 1: 0);
+                info->stats[STAT_STAMINA]   += (lvl > 4  ? 1: 0);
+                info->stats[STAT_AGILITY]   += (lvl > 16 ? 2: (lvl > 1 ? 1: 0));
+                info->stats[STAT_INTELLECT] += (lvl > 8 && !(lvl%2) ? 1: 0);
+                info->stats[STAT_SPIRIT]    += (lvl > 38 ? 1: (lvl > 9 && !(lvl%2) ? 1: 0));
+                break;
+			case CLASS_WITCHHUNTER:
+                info->stats[STAT_STRENGTH]  += (lvl > 5  ? 1: 0);
+                info->stats[STAT_STAMINA]   += (lvl > 4  ? 1: 0);
+                info->stats[STAT_AGILITY]   += (lvl > 16 ? 2: (lvl > 1 ? 1: 0));
+                info->stats[STAT_INTELLECT] += (lvl > 8 && !(lvl%2) ? 1: 0);
+                info->stats[STAT_SPIRIT]    += (lvl > 38 ? 1: (lvl > 9 && !(lvl%2) ? 1: 0));
+                break;
+			case CLASS_STORMBRINGER:
+                info->stats[STAT_STRENGTH]  += (lvl > 9 && !(lvl%2) ? 1: 0);
+                info->stats[STAT_STAMINA]   += (lvl > 38 ? 2: (lvl > 3 ? 1: 0));
+                info->stats[STAT_AGILITY]   += (lvl > 9 && !(lvl%2) ? 1: 0);
+                info->stats[STAT_INTELLECT] += (lvl > 33 ? 2: (lvl > 2 ? 1: 0));
+                info->stats[STAT_SPIRIT]    += (lvl > 38 ? 2: (lvl > 3 ? 1: 0));
+                break;
+			case CLASS_SPIRITMAGE:
+                info->stats[STAT_STRENGTH]  += (lvl > 9 && !(lvl%2) ? 1: 0);
+                info->stats[STAT_STAMINA]   += (lvl > 38 ? 2: (lvl > 3 ? 1: 0));
+                info->stats[STAT_AGILITY]   += (lvl > 9 && !(lvl%2) ? 1: 0);
+                info->stats[STAT_INTELLECT] += (lvl > 33 ? 2: (lvl > 2 ? 1: 0));
+                info->stats[STAT_SPIRIT]    += (lvl > 38 ? 2: (lvl > 3 ? 1: 0));
+                break;
+			case CLASS_ABOMINATION:
+                info->stats[STAT_STRENGTH]  += (lvl > 23 ? 2: (lvl > 1  ? 1: 0));
+                info->stats[STAT_STAMINA]   += (lvl > 23 ? 2: (lvl > 1  ? 1: 0));
+                info->stats[STAT_AGILITY]   += (lvl > 36 ? 1: (lvl > 6 && (lvl%2) ? 1: 0));
+                info->stats[STAT_INTELLECT] += (lvl > 9 && !(lvl%2) ? 1: 0);
+                info->stats[STAT_SPIRIT]    += (lvl > 9 && !(lvl%2) ? 1: 0);
+                break;
+			case CLASS_GUARDIAN:
+                info->stats[STAT_STRENGTH]  += (lvl > 23 ? 2: (lvl > 1  ? 1: 0));
+                info->stats[STAT_STAMINA]   += (lvl > 23 ? 2: (lvl > 1  ? 1: 0));
+                info->stats[STAT_AGILITY]   += (lvl > 36 ? 1: (lvl > 6 && (lvl%2) ? 1: 0));
+                info->stats[STAT_INTELLECT] += (lvl > 9 && !(lvl%2) ? 1: 0);
+                info->stats[STAT_SPIRIT]    += (lvl > 9 && !(lvl%2) ? 1: 0);
+                break;
+			case CLASS_SAMURAI:
+                info->stats[STAT_STRENGTH]  += (lvl > 23 ? 2: (lvl > 1  ? 1: 0));
+                info->stats[STAT_STAMINA]   += (lvl > 23 ? 2: (lvl > 1  ? 1: 0));
+                info->stats[STAT_AGILITY]   += (lvl > 36 ? 1: (lvl > 6 && (lvl%2) ? 1: 0));
+                info->stats[STAT_INTELLECT] += (lvl > 9 && !(lvl%2) ? 1: 0);
+                info->stats[STAT_SPIRIT]    += (lvl > 9 && !(lvl%2) ? 1: 0);
+                break;
+			case CLASS_WORGEN:
+                info->stats[STAT_STRENGTH]  += (lvl > 4  ? 1: 0);
+                info->stats[STAT_STAMINA]   += (lvl > 4  ? 1: 0);
+                info->stats[STAT_AGILITY]   += (lvl > 33 ? 2: (lvl > 1 ? 1: 0));
+                info->stats[STAT_INTELLECT] += (lvl > 8 && (lvl%2) ? 1: 0);
+                info->stats[STAT_SPIRIT]    += (lvl > 38 ? 1: (lvl > 9 && !(lvl%2) ? 1: 0));
+                break;
+			case CLASS_THIEF:
+                info->stats[STAT_STRENGTH]  += (lvl > 4  ? 1: 0);
+                info->stats[STAT_STAMINA]   += (lvl > 4  ? 1: 0);
+                info->stats[STAT_AGILITY]   += (lvl > 33 ? 2: (lvl > 1 ? 1: 0));
+                info->stats[STAT_INTELLECT] += (lvl > 8 && (lvl%2) ? 1: 0);
+                info->stats[STAT_SPIRIT]    += (lvl > 38 ? 1: (lvl > 9 && !(lvl%2) ? 1: 0));
+                break;
+			case CLASS_RANGER:
+                info->stats[STAT_STRENGTH]  += (lvl > 4  ? 1: 0);
+                info->stats[STAT_STAMINA]   += (lvl > 4  ? 1: 0);
+                info->stats[STAT_AGILITY]   += (lvl > 33 ? 2: (lvl > 1 ? 1: 0));
+                info->stats[STAT_INTELLECT] += (lvl > 8 && (lvl%2) ? 1: 0);
+                info->stats[STAT_SPIRIT]    += (lvl > 38 ? 1: (lvl > 9 && !(lvl%2) ? 1: 0));
+                break;
+			case CLASS_BARD:
+                info->stats[STAT_STRENGTH]  += (lvl > 5  ? 1: 0);
+                info->stats[STAT_STAMINA]   += (lvl > 4  ? 1: 0);
+                info->stats[STAT_AGILITY]   += (lvl > 16 ? 2: (lvl > 1 ? 1: 0));
+                info->stats[STAT_INTELLECT] += (lvl > 8 && !(lvl%2) ? 1: 0);
+                info->stats[STAT_SPIRIT]    += (lvl > 38 ? 1: (lvl > 9 && !(lvl%2) ? 1: 0));
+                break;
+			case CLASS_PROPHET:
+                info->stats[STAT_STRENGTH]  += (lvl > 9 && !(lvl%2) ? 1: 0);
+                info->stats[STAT_STAMINA]   += (lvl > 38 ? 2: (lvl > 3 ? 1: 0));
+                info->stats[STAT_AGILITY]   += (lvl > 9 && !(lvl%2) ? 1: 0);
+                info->stats[STAT_INTELLECT] += (lvl > 33 ? 2: (lvl > 2 ? 1: 0));
+                info->stats[STAT_SPIRIT]    += (lvl > 38 ? 2: (lvl > 3 ? 1: 0));
+                break;
+			case CLASS_DJINN:
+                info->stats[STAT_STRENGTH]  += (lvl > 9 && !(lvl%2) ? 1: 0);
+                info->stats[STAT_STAMINA]   += (lvl > 38 ? 2: (lvl > 3 ? 1: 0));
+                info->stats[STAT_AGILITY]   += (lvl > 9 && !(lvl%2) ? 1: 0);
+                info->stats[STAT_INTELLECT] += (lvl > 33 ? 2: (lvl > 2 ? 1: 0));
+                info->stats[STAT_SPIRIT]    += (lvl > 38 ? 2: (lvl > 3 ? 1: 0));
+                break;
+			case CLASS_PYROMANCER:
+                info->stats[STAT_STRENGTH]  += (lvl > 9 && !(lvl%2) ? 1: 0);
+                info->stats[STAT_STAMINA]   += (lvl > 38 ? 2: (lvl > 3 ? 1: 0));
+                info->stats[STAT_AGILITY]   += (lvl > 9 && !(lvl%2) ? 1: 0);
+                info->stats[STAT_INTELLECT] += (lvl > 33 ? 2: (lvl > 2 ? 1: 0));
+                info->stats[STAT_SPIRIT]    += (lvl > 38 ? 2: (lvl > 3 ? 1: 0));
+                break;
+			case CLASS_CULTIST:
+                info->stats[STAT_STRENGTH]  += (lvl > 9 && !(lvl%2) ? 1: 0);
+                info->stats[STAT_STAMINA]   += (lvl > 38 ? 2: (lvl > 3 ? 1: 0));
+                info->stats[STAT_AGILITY]   += (lvl > 9 && !(lvl%2) ? 1: 0);
+                info->stats[STAT_INTELLECT] += (lvl > 33 ? 2: (lvl > 2 ? 1: 0));
+                info->stats[STAT_SPIRIT]    += (lvl > 38 ? 2: (lvl > 3 ? 1: 0));
+                break;
+			case CLASS_NECROMANCER:
+                info->stats[STAT_STRENGTH]  += (lvl > 9 && !(lvl%2) ? 1: 0);
+                info->stats[STAT_STAMINA]   += (lvl > 38 ? 2: (lvl > 3 ? 1: 0));
+                info->stats[STAT_AGILITY]   += (lvl > 9 && !(lvl%2) ? 1: 0);
+                info->stats[STAT_INTELLECT] += (lvl > 33 ? 2: (lvl > 2 ? 1: 0));
+                info->stats[STAT_SPIRIT]    += (lvl > 38 ? 2: (lvl > 3 ? 1: 0));
+                break;
+			case CLASS_SUNDANCER:
+                info->stats[STAT_STRENGTH]  += (lvl > 23 ? 2: (lvl > 1  ? 1: 0));
+                info->stats[STAT_STAMINA]   += (lvl > 23 ? 2: (lvl > 1  ? 1: 0));
+                info->stats[STAT_AGILITY]   += (lvl > 36 ? 1: (lvl > 6 && (lvl%2) ? 1: 0));
+                info->stats[STAT_INTELLECT] += (lvl > 9 && !(lvl%2) ? 1: 0);
+                info->stats[STAT_SPIRIT]    += (lvl > 9 && !(lvl%2) ? 1: 0);
+                break;	
+			case CLASS_TINKER:
+                info->stats[STAT_STRENGTH]  += (lvl > 9 && !(lvl%2) ? 1: 0);
+                info->stats[STAT_STAMINA]   += (lvl > 38 ? 2: (lvl > 3 ? 1: 0));
+                info->stats[STAT_AGILITY]   += (lvl > 9 && !(lvl%2) ? 1: 0);
+                info->stats[STAT_INTELLECT] += (lvl > 33 ? 2: (lvl > 2 ? 1: 0));
+                info->stats[STAT_SPIRIT]    += (lvl > 38 ? 2: (lvl > 3 ? 1: 0));
+                break;
+			case CLASS_RIFTBLADE:
+                info->stats[STAT_STRENGTH]  += (lvl > 9 && !(lvl%2) ? 1: 0);
+                info->stats[STAT_STAMINA]   += (lvl > 38 ? 2: (lvl > 3 ? 1: 0));
+                info->stats[STAT_AGILITY]   += (lvl > 9 && !(lvl%2) ? 1: 0);
+                info->stats[STAT_INTELLECT] += (lvl > 33 ? 2: (lvl > 2 ? 1: 0));
+                info->stats[STAT_SPIRIT]    += (lvl > 38 ? 2: (lvl > 3 ? 1: 0));
+                break;
+			case CLASS_REAPER:
+                info->stats[STAT_STRENGTH]  += (lvl > 9 && !(lvl%2) ? 1: 0);
+                info->stats[STAT_STAMINA]   += (lvl > 38 ? 2: (lvl > 3 ? 1: 0));
+                info->stats[STAT_AGILITY]   += (lvl > 9 && !(lvl%2) ? 1: 0);
+                info->stats[STAT_INTELLECT] += (lvl > 33 ? 2: (lvl > 2 ? 1: 0));
+                info->stats[STAT_SPIRIT]    += (lvl > 38 ? 2: (lvl > 3 ? 1: 0));
+                break;
+			case CLASS_GROVEWARDEN:
+                info->stats[STAT_STRENGTH]  += (lvl > 9 && !(lvl%2) ? 1: 0);
+                info->stats[STAT_STAMINA]   += (lvl > 38 ? 2: (lvl > 3 ? 1: 0));
+                info->stats[STAT_AGILITY]   += (lvl > 9 && !(lvl%2) ? 1: 0);
+                info->stats[STAT_INTELLECT] += (lvl > 33 ? 2: (lvl > 2 ? 1: 0));
+                info->stats[STAT_SPIRIT]    += (lvl > 38 ? 2: (lvl > 3 ? 1: 0));
+                break;
+			case CLASS_TEMPLAR:
+                info->stats[STAT_STRENGTH]  += (lvl > 23 ? 2: (lvl > 1  ? 1: 0));
+                info->stats[STAT_STAMINA]   += (lvl > 23 ? 2: (lvl > 1  ? 1: 0));
+                info->stats[STAT_AGILITY]   += (lvl > 36 ? 1: (lvl > 6 && (lvl%2) ? 1: 0));
+                info->stats[STAT_INTELLECT] += (lvl > 9 && !(lvl%2) ? 1: 0);
+                info->stats[STAT_SPIRIT]    += (lvl > 9 && !(lvl%2) ? 1: 0);
+                break;
+			case CLASS_TIDECALLER:
+                info->stats[STAT_STRENGTH]  += (lvl > 9 && !(lvl%2) ? 1: 0);
+                info->stats[STAT_STAMINA]   += (lvl > 38 ? 2: (lvl > 3 ? 1: 0));
+                info->stats[STAT_AGILITY]   += (lvl > 9 && !(lvl%2) ? 1: 0);
+                info->stats[STAT_INTELLECT] += (lvl > 33 ? 2: (lvl > 2 ? 1: 0));
+                info->stats[STAT_SPIRIT]    += (lvl > 38 ? 2: (lvl > 3 ? 1: 0));
+                break;
+			case CLASS_DOOMCALLER:
+                info->stats[STAT_STRENGTH]  += (lvl > 9 && !(lvl%2) ? 1: 0);
+                info->stats[STAT_STAMINA]   += (lvl > 38 ? 2: (lvl > 3 ? 1: 0));
+                info->stats[STAT_AGILITY]   += (lvl > 9 && !(lvl%2) ? 1: 0);
+                info->stats[STAT_INTELLECT] += (lvl > 33 ? 2: (lvl > 2 ? 1: 0));
+                info->stats[STAT_SPIRIT]    += (lvl > 38 ? 2: (lvl > 3 ? 1: 0));
+                break;
+			case CLASS_HELLION:
+                info->stats[STAT_STRENGTH]  += (lvl > 9 && !(lvl%2) ? 1: 0);
+                info->stats[STAT_STAMINA]   += (lvl > 38 ? 2: (lvl > 3 ? 1: 0));
+                info->stats[STAT_AGILITY]   += (lvl > 9 && !(lvl%2) ? 1: 0);
+                info->stats[STAT_INTELLECT] += (lvl > 33 ? 2: (lvl > 2 ? 1: 0));
+                info->stats[STAT_SPIRIT]    += (lvl > 38 ? 2: (lvl > 3 ? 1: 0));
+                break;
+			case CLASS_STARLORD:
+                info->stats[STAT_STRENGTH]  += (lvl > 9 && !(lvl%2) ? 1: 0);
+                info->stats[STAT_STAMINA]   += (lvl > 38 ? 2: (lvl > 3 ? 1: 0));
+                info->stats[STAT_AGILITY]   += (lvl > 9 && !(lvl%2) ? 1: 0);
+                info->stats[STAT_INTELLECT] += (lvl > 33 ? 2: (lvl > 2 ? 1: 0));
+                info->stats[STAT_SPIRIT]    += (lvl > 38 ? 2: (lvl > 3 ? 1: 0));
+                break;
+			case CLASS_LION:
+                info->stats[STAT_STRENGTH]  += (lvl > 9 && !(lvl%2) ? 1: 0);
+                info->stats[STAT_STAMINA]   += (lvl > 38 ? 2: (lvl > 3 ? 1: 0));
+                info->stats[STAT_AGILITY]   += (lvl > 9 && !(lvl%2) ? 1: 0);
+                info->stats[STAT_INTELLECT] += (lvl > 33 ? 2: (lvl > 2 ? 1: 0));
+                info->stats[STAT_SPIRIT]    += (lvl > 38 ? 2: (lvl > 3 ? 1: 0));
+                break;
+			case CLASS_VALKYRIE:
+                info->stats[STAT_STRENGTH]  += (lvl > 9 && !(lvl%2) ? 1: 0);
+                info->stats[STAT_STAMINA]   += (lvl > 38 ? 2: (lvl > 3 ? 1: 0));
+                info->stats[STAT_AGILITY]   += (lvl > 9 && !(lvl%2) ? 1: 0);
+                info->stats[STAT_INTELLECT] += (lvl > 33 ? 2: (lvl > 2 ? 1: 0));
+                info->stats[STAT_SPIRIT]    += (lvl > 38 ? 2: (lvl > 3 ? 1: 0));
+                break;
+			case CLASS_SPARTAN:
+                info->stats[STAT_STRENGTH]  += (lvl > 23 ? 2: (lvl > 1  ? 1: 0));
+                info->stats[STAT_STAMINA]   += (lvl > 23 ? 2: (lvl > 1  ? 1: 0));
+                info->stats[STAT_AGILITY]   += (lvl > 36 ? 1: (lvl > 6 && (lvl%2) ? 1: 0));
+                info->stats[STAT_INTELLECT] += (lvl > 9 && !(lvl%2) ? 1: 0);
+                info->stats[STAT_SPIRIT]    += (lvl > 9 && !(lvl%2) ? 1: 0);
+                break;	
         }
     }
 }
