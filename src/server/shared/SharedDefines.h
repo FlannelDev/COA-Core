@@ -138,7 +138,7 @@ enum Classes
     CLASS_UNK           = 41,
     CLASS_DRUID         = 42 // TITLE Druid
  
-CLASS_DRAGONKNIGHT = 1; //-Class 
+CLASS_DRAGONKNIGHT = 1; //-Class  custom class list
 CLASS_WITCHDOCTOR = 2;
 CLASS_DEMONHUNTER = 3;
 CLASS_WITCHHUNTER = 4;
@@ -3619,7 +3619,44 @@ enum SpellFamilyNames
     // 14 - unused
     SPELLFAMILY_DEATHKNIGHT = 15, // TITLE Death Knight
     // 16 - unused
-    SPELLFAMILY_PET         = 17  // TITLE Pet
+    SPELLFAMILY_PET         = 17,  // TITLE Pet
+	SPELLFAMILY_DRAGONKNIGHT         =18,   //-Class custom class spell families
+	SPELLFAMILY_DEMONHUNTER         = 19,   // 
+	SPELLFAMILY_WITCHDOCTOR         = 20,   // 
+	SPELLFAMILY_WITCHHUNTER         = 21,  // 
+	SPELLFAMILY_STORMBRINGER         = 22,  // 
+	SPELLFAMILY_SPIRITMAGE         = 23,  // 
+	SPELLFAMILY_ABOMINATION         = 24,  // 
+	SPELLFAMILY_GUARDIAN         = 25,  // 
+	SPELLFAMILY_SAMURAI         = 26,  // 
+	SPELLFAMILY_WORGEN         = 27, // 
+	SPELLFAMILY_THIEF         = 28,  // 
+	SPELLFAMILY_RANGER         = 29,  // 
+	SPELLFAMILY_BARD         = 30,  // 
+	SPELLFAMILY_PROPHET         = 31,  // 
+	SPELLFAMILY_DJINN         = 32,  // 
+	SPELLFAMILY_PYROMANCER         = 33,  // 
+	SPELLFAMILY_CULTIST         = 34,  // 
+	SPELLFAMILY_NECROMANCER         = 35,  // 
+	SPELLFAMILY_SUNDANCER         = 36,  // 
+	SPELLFAMILY_TINKER         = 37, // 
+	SPELLFAMILY_RIFTBLADE         = 38,  // 
+	SPELLFAMILY_REAPER         = 39,  // 
+	SPELLFAMILY_GROVEWARDEN         = 40,  // 
+	SPELLFAMILY_TEMPLAR         = 41,  // 
+	SPELLFAMILY_TIDECALLER         = 42,  // 
+	SPELLFAMILY_DOOMCALLER         = 43, // 
+	SPELLFAMILY_HELLION         = 4,4  // 
+	SPELLFAMILY_STARLORD         = 45,  // 
+	SPELLFAMILY_LION         = 46,  // 
+	SPELLFAMILY_VALKYRIE         = 47,  // 
+	SPELLFAMILY_SPARTAN         = 48  // 
+	 
+	
+	
+	
+	
+	
 };
 
 enum TradeStatus
