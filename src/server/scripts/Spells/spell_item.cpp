@@ -651,6 +651,7 @@ class spell_item_deathbringers_will : public SpellScriptLoader
 					//CLASS_SPARTAN
 					{ Strength, Critical, Haste },
 					//-Class End of Custom Class
+					
                     //CLASS_WARRIOR
                     { Strength, Critical, Haste },
                     //CLASS_PALADIN

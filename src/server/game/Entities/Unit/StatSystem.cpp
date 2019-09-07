@@ -771,6 +771,19 @@ void Player::UpdateAllCritPercentages()
 
 float const m_diminishing_k[MAX_CLASSES] =
 {
+    0.9560f,  // Warrior
+    0.9560f,  // Paladin
+    0.9880f,  // Hunter
+    0.9880f,  // Rogue
+    0.9830f,  // Priest
+    0.9560f,  // DK
+    0.9880f,  // Shaman
+    0.9830f,  // Mage
+    0.9830f,  // Warlock
+    0.0f,     // ??
+    0.9720f,   // Druid
+	
+	
 	 0.9560f,  //-Class custom diminshing return
     0.9560f,  // 
     0.9880f,  // 
@@ -801,19 +814,8 @@ float const m_diminishing_k[MAX_CLASSES] =
     0.9830f,  //
     0.9720f,  // 
 	0.9720f,  //
-	0.9720f,  //
+	0.9720f  //
 	
-    0.9560f,  // Warrior
-    0.9560f,  // Paladin
-    0.9880f,  // Hunter
-    0.9880f,  // Rogue
-    0.9830f,  // Priest
-    0.9560f,  // DK
-    0.9880f,  // Shaman
-    0.9830f,  // Mage
-    0.9830f,  // Warlock
-    0.0f,     // ??
-    0.9720f   // Druid
 };
 
 // helper function
@@ -841,42 +843,7 @@ float CalculateDiminishingReturns(float const (&capArray)[MAX_CLASSES], uint8 pl
 
 float const miss_cap[MAX_CLASSES] =
 {
-    16.00f,     //-Class custom miss cap 
-    16.00f,     // 
-    16.00f,     // 
-    16.00f,     //
-    16.00f,     // 
-    16.00f,     //
-    16.00f,     //
-    16.00f,     //
-    16.00f,     // 
-    16.00f,     // 
-	16.00f,     // 
-    16.00f,     // 
-    16.00f,     // 
-    16.00f,     //
-    16.00f,     // 
-    16.00f,     //
-    16.00f,     //
-    16.00f,     //
-    16.00f,     // 
-    16.00f,     // 
-	16.00f,     // 
-    16.00f,     // 
-    16.00f,     // 
-    16.00f,     //
-    16.00f,     // 
-    16.00f,     //
-    16.00f,     //
-    16.00f,     //
-    16.00f,     // 
-    16.00f,     // 
-	16.00f,     // 
-
-
-
-
-
+   
     16.00f,     // Warrior //correct
     16.00f,     // Paladin //correct
     16.00f,     // Hunter  //?
@@ -887,7 +854,39 @@ float const miss_cap[MAX_CLASSES] =
     16.00f,     // Mage    //?
     16.00f,     // Warlock //?
     0.0f,       // ??
-    16.00f      // Druid   //?
+    16.00f,      // Druid   //?
+	 16.00f,     //-Class custom miss cap 
+    16.00f,     // 
+    16.00f,     // 
+    16.00f,     //
+    16.00f,     // 
+    16.00f,     //
+    16.00f,     //
+    16.00f,     //
+    16.00f,     // 
+    16.00f,     // 
+	16.00f,     // 
+    16.00f,     // 
+    16.00f,     // 
+    16.00f,     //
+    16.00f,     // 
+    16.00f,     //
+    16.00f,     //
+    16.00f,     //
+    16.00f,     // 
+    16.00f,     // 
+	16.00f,     // 
+    16.00f,     // 
+    16.00f,     // 
+    16.00f,     //
+    16.00f,     // 
+    16.00f,     //
+    16.00f,     //
+    16.00f,     //
+    16.00f,     // 
+    16.00f,     // 
+	16.00f     // 
+
 };
 
 float Player::GetMissPercentageFromDefense() const
@@ -903,7 +902,23 @@ float Player::GetMissPercentageFromDefense() const
 
 float const parry_cap[MAX_CLASSES] =
 {
-	47.003525f,     //-Class this will have issues. i just know it. but parry cap
+	
+	
+	
+
+    47.003525f,     // Warrior
+    47.003525f,     // Paladin
+    145.560408f,    // Hunter
+    145.560408f,    // Rogue
+    0.0f,           // Priest
+    47.003525f,     // DK
+    145.560408f,    // Shaman
+    0.0f,           // Mage
+    0.0f,           // Warlock
+    0.0f,           // ??
+    0.0f,            // Druid
+
+47.003525f,     //-Class this will have issues. i just know it. but parry cap
     47.003525f,     //
     145.560408f,    // 
     145.560408f,    // 
@@ -933,21 +948,7 @@ float const parry_cap[MAX_CLASSES] =
     0.0f,           // 
     0.0f,           // 
     0.0f,            //
-	0.0f,            //
-	
-	
-
-    47.003525f,     // Warrior
-    47.003525f,     // Paladin
-    145.560408f,    // Hunter
-    145.560408f,    // Rogue
-    0.0f,           // Priest
-    47.003525f,     // DK
-    145.560408f,    // Shaman
-    0.0f,           // Mage
-    0.0f,           // Warlock
-    0.0f,           // ??
-    0.0f            // Druid
+	0.0f            //
 };
 
 void Player::UpdateParryPercentage()
@@ -979,6 +980,21 @@ void Player::UpdateParryPercentage()
 
 float const dodge_cap[MAX_CLASSES] =
 {
+	
+	
+	
+	
+    88.129021f,     // Warrior
+    88.129021f,     // Paladin
+    145.560408f,    // Hunter
+    145.560408f,    // Rogue
+    150.375940f,    // Priest
+    88.129021f,     // DK
+    145.560408f,    // Shaman
+    150.375940f,    // Mage
+    150.375940f,    // Warlock
+    0.0f,           // ??
+    116.890707f,     // Druid
 	88.129021f,     //-Class custom dodge cap 
     88.129021f,     // 
     145.560408f,    // 
@@ -1009,21 +1025,7 @@ float const dodge_cap[MAX_CLASSES] =
     150.375940f,    // 
     150.375940f,    // 
     116.890707f,     // 
-	116.890707f,     // 
-	
-	
-	
-    88.129021f,     // Warrior
-    88.129021f,     // Paladin
-    145.560408f,    // Hunter
-    145.560408f,    // Rogue
-    150.375940f,    // Priest
-    88.129021f,     // DK
-    145.560408f,    // Shaman
-    150.375940f,    // Mage
-    150.375940f,    // Warlock
-    0.0f,           // ??
-    116.890707f     // Druid
+	116.890707f     // 
 };
 
 void Player::UpdateDodgePercentage()
