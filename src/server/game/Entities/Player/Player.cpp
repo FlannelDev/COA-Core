@@ -5329,7 +5329,39 @@ void Player::GetDodgeFromAgility(float &diminishing, float &nondiminishing) cons
     // Table for base dodge values
     const float dodge_base[MAX_CLASSES] =
     {
-         0.036640f, // Warrior
+         //-Class Custom Class dodge base
+		 0.036640f, // 
+         0.034943f, // 
+         0.020957f, // 
+         0.034178f, // 
+         0.036640f, //
+         0.021080f, // 
+         0.036587f, // 
+         0.024211f, // 
+         0.056097f,  // 
+		 0.036640f, // 
+         0.034943f, // 
+         0.020957f, // 
+         0.036640f, //
+         0.021080f, //
+         0.036587f, // 
+         0.024211f, // 
+         0.056097f,  // 
+		 0.036640f, // 
+         0.034943f, // 
+         0.020957f, // 
+         0.036640f, //
+         0.021080f, // 
+         0.036587f, //
+         0.024211f, // 
+         0.056097f,  // 
+		 0.036640f, //
+         0.021080f, // 
+         0.036587f, //
+         0.024211f, // 
+         0.056097f,  // 
+		 
+		 0.036640f, // Warrior
          0.034943f, // Paladin
         -0.040873f, // Hunter
          0.020957f, // Rogue
@@ -5344,7 +5376,40 @@ void Player::GetDodgeFromAgility(float &diminishing, float &nondiminishing) cons
     // Crit/agility to dodge/agility coefficient multipliers; 3.2.0 increased required agility by 15%
     const float crit_to_dodge[MAX_CLASSES] =
     {
-         0.85f/1.15f,    // Warrior
+		 0.85f/1.15f,    // 
+         1.00f/1.15f,    //
+         1.11f/1.15f,    //
+         2.00f/1.15f,    // 
+         1.00f/1.15f,    // 
+         0.85f/1.15f,    // 
+         1.60f/1.15f,    // 
+         1.00f/1.15f,    // 
+         0.97f/1.15f,    // 
+         2.00f/1.15f,     //     
+		 0.85f/1.15f,    // 
+         1.00f/1.15f,    //
+         1.11f/1.15f,    //
+         2.00f/1.15f,    // 
+         1.00f/1.15f,    // 
+         0.85f/1.15f,    // 
+         1.60f/1.15f,    // 
+         1.00f/1.15f,    // 
+         0.97f/1.15f,    // 
+         2.00f/1.15f,     //  
+		 0.85f/1.15f,    // 
+         1.00f/1.15f,    //
+         1.11f/1.15f,    //
+         2.00f/1.15f,    // 
+         1.00f/1.15f,    // 
+         0.85f/1.15f,    // 
+         1.60f/1.15f,    // 
+         1.00f/1.15f,    // 
+         0.97f/1.15f,    // 
+         2.00f/1.15f,     //  		 
+		 2.00f/1.15f,     // 
+
+
+		 0.85f/1.15f,    // Warrior
          1.00f/1.15f,    // Paladin
          1.11f/1.15f,    // Hunter
          2.00f/1.15f,    // Rogue
