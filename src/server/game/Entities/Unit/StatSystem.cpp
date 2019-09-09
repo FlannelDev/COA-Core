@@ -539,13 +539,18 @@ void Player::UpdateAttackPowerAndDamage(bool ranged)
 			case CLASS_LION:
 			 val2 = level * 3.0f + GetStat(STAT_STRENGTH) * 2.0f - 20.0f;
                 break;
-			case CLASS_VALKYRIE:
+			case CLASS_FELMAGE:
 			val2 = GetStat(STAT_STRENGTH) - 10.0f;
                 break;
-			case CLASS_SPARTAN:
-			 val2 = level * 3.0f + GetStat(STAT_STRENGTH) * 2.0f - 20.0f;
+			case CLASS_CHRONOMANCER:
+			val2 = GetStat(STAT_STRENGTH) - 10.0f;
                 break;
-			
+				case CLASS_TIMELORD:
+			val2 = GetStat(STAT_STRENGTH) - 10.0f;
+                break;
+			case CLASS_DARKRANGER:
+			val2 = level * 2.0f + GetStat(STAT_STRENGTH) + GetStat(STAT_AGILITY) - 20.0f;
+                break;
         }
     }
 
@@ -814,8 +819,8 @@ float const m_diminishing_k[MAX_CLASSES] =
     0.9830f,  //
     0.9720f,  // 
 	0.9720f,  //
+	0.9720f,  //
 	0.9720f  //
-	
 };
 
 // helper function
@@ -885,6 +890,7 @@ float const miss_cap[MAX_CLASSES] =
     16.00f,     //
     16.00f,     // 
     16.00f,     // 
+	16.00f,     // 
 	16.00f     // 
 
 };
@@ -948,6 +954,7 @@ float const parry_cap[MAX_CLASSES] =
     0.0f,           // 
     0.0f,           // 
     0.0f,            //
+	0.0f,            //
 	0.0f            //
 };
 
@@ -1025,6 +1032,7 @@ float const dodge_cap[MAX_CLASSES] =
     150.375940f,    // 
     150.375940f,    // 
     116.890707f,     // 
+	116.890707f,     // 
 	116.890707f     // 
 };
 

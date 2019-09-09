@@ -5373,8 +5373,9 @@ void Player::GetDodgeFromAgility(float &diminishing, float &nondiminishing) cons
          0.021080f, // 
          0.036587f, //
          0.024211f, // 
+         0.056097f,  // 
+		 0.024211f, // 
          0.056097f  // 
-		 
 		 
 		 
     };

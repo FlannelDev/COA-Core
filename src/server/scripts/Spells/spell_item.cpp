@@ -588,6 +588,32 @@ class spell_item_deathbringers_will : public SpellScriptLoader
                 {
                     //CLASS_NONE
                     { },
+					
+					      //CLASS_WARRIOR
+                    { Strength, Critical, Haste },
+                    //CLASS_PALADIN
+                    { Strength, Critical, Haste },
+                    //CLASS_HUNTER
+                    { Agility, Critical, AttackPower },
+                    //CLASS_ROGUE
+                    { Agility, Haste, AttackPower },
+                    //CLASS_PRIEST
+                    { },
+                    //CLASS_DEATH_KNIGHT
+                    { Strength, Critical, Haste },
+                    //CLASS_SHAMAN
+                    { Agility, Haste, AttackPower },
+                    //CLASS_MAGE
+                    { },
+                    //CLASS_WARLOCK
+                    { },
+                    //CLASS_UNK
+                    { },
+                    //CLASS_DRUID
+                    { Strength, Agility, Haste },
+					
+					
+					
 					//CLASS_DRAGONKNIGHT
 					{ Strength, Critical, Haste },
 					//CLASS_WITCHDOCTOR
@@ -646,34 +672,14 @@ class spell_item_deathbringers_will : public SpellScriptLoader
 					{ Agility, Critical, AttackPower },
 					//CLASS_LION
 					{ },
-					//CLASS_VALKYRIE
+					//CLASS_FELMAGE
 					{ },
-					//CLASS_SPARTAN
-					{ Strength, Critical, Haste },
-					//-Class End of Custom Class
-					
-                    //CLASS_WARRIOR
-                    { Strength, Critical, Haste },
-                    //CLASS_PALADIN
-                    { Strength, Critical, Haste },
-                    //CLASS_HUNTER
-                    { Agility, Critical, AttackPower },
-                    //CLASS_ROGUE
-                    { Agility, Haste, AttackPower },
-                    //CLASS_PRIEST
-                    { },
-                    //CLASS_DEATH_KNIGHT
-                    { Strength, Critical, Haste },
-                    //CLASS_SHAMAN
-                    { Agility, Haste, AttackPower },
-                    //CLASS_MAGE
-                    { },
-                    //CLASS_WARLOCK
-                    { },
-                    //CLASS_UNK
-                    { },
-                    //CLASS_DRUID
-                    { Strength, Agility, Haste }
+					//CLASS_CHRONOMANCER
+					{ },
+					//CLASS_TIMELORD
+					{ },
+					//CLASS_DARKRANGER
+					{ Strength, Critical, Haste }           
                 };
 
                 PreventDefaultAction();
